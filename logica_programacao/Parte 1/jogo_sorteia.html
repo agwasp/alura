@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<h1>Jogo de Sorteio</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    function sorteia (numero){
+        return Math.round(Math.random() * numero);
+    }
+
+    var numeroSorteado = sorteia(prompt("Digite um range de números a serem sorteados:"));
+
+    var chute = parseInt(prompt("Já temos um número! Qual você acha que é?"))
+
+    if(chute == numeroSorteado){
+        mostraTexto("Você acertou!");
+    } 
+    else {
+        mostraTexto("Você errou! O número pensado foi " + numeroSorteado);
+        mostraTexto("Tente novamente!");
+    }
+</script>

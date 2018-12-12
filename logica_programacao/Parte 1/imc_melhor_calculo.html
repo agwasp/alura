@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>Minha primeira interação com o usuário!</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura){
+        var imc = peso / (altura * altura);
+        return Math.round(imc);
+    }
+
+    var nome = prompt("Informe o seu nome");
+    var altura = prompt(nome + ", Informe a sua altura");
+    var peso = prompt(nome + ", Informe o seu peso");
+    var imc = calculaImc(peso, altura);
+    
+    mostraTexto(nome + ", o seu IMC é " + imc);       
+
+    if(imc < 18.5){
+        mostraTexto("O seu IMC está abaixo do recomendado.");
+    }
+    if(imc > 35){
+        mostraTexto("O seu IMC está acima do recomendado.");
+    }
+    if(imc >= 18.5 && imc <= 35){
+        mostraTexto("O seu IMC está excelente.");
+    }
+</script>

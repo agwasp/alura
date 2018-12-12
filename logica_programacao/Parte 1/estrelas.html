@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<h1>Jogo das Estrelas</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+    }
+
+    for (var linha = 1; linha <= 10; linha++){
+        for (var coluna = 1; coluna <= 100; coluna++){
+            mostraTexto("*");
+        }
+        pulaLinha();
+    }
+</script>

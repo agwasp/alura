@@ -1,0 +1,16 @@
+version: '1'
+db:
+  image: mysql
+  volumes:
+    - /<pasta-local>/:/<pasta-container>/
+  environment:
+    - MYSQL_ROOT_PASSWORD=test123
+
+blog:
+  image: wordpress
+  environment:
+    - WORDPRESS_DB_PASSWORD=test123
+  links:
+    - db:mysql
+  ports:
+    - 8080:80

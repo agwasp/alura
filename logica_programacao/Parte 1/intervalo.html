@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h1>Jogo Anos das Copa</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    var contador = 30;
+        
+    while (contador <= 40) {
+        if (contador != 33 && contador != 37){
+            mostraTexto(contador);
+        }
+        contador = contador + 1;
+    }
+
+    mostraTexto("FIM!");
+
+</script>

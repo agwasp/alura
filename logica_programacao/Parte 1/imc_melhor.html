@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>Minha primeira função!</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura){
+        var imc = peso / (altura * altura);
+        return Math.round(imc);
+        pulaLinha();
+    }
+
+    var meuImc = calculaImc(88, 1.74);
+    mostraTexto("Meu IMC");
+    pulaLinha();
+    mostraTexto(meuImc);
+    pulaLinha();
+    
+    var amigoImc = calculaImc(100, 1.80);
+    mostraTexto("IMC do meu amigo");
+    pulaLinha();
+    mostraTexto(amigoImc);
+    pulaLinha();
+
+    var totalImc = calculaImc(88, 1.74) + calculaImc(100, 1.80);
+    mostraTexto("A soma dos IMCs é " + totalImc);
+        
+</script>

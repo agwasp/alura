@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<h1>Jogo Media das Idades</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    var totalDeFamiliares = parseInt(prompt("Digite o número de familiares:"));
+    var contador = 1;
+    var totalIdades = 0;
+
+    while (contador <= totalDeFamiliares){
+        var idade = parseInt(prompt("Digite idade do familiar:"));
+        totalIdades = totalIdades + idade;      
+        contador++;
+    }
+
+    var mediaIdades = totalIdades / totalDeFamiliares;
+    mostraTexto("A média das idades é " + mediaIdades);
+    
+    mostraTexto("Fim!");
+</script>

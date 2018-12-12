@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<h1>Jogo Anos das Copa</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    var anoLimite = parseInt(prompt("Entre com o ano limite:"))
+    var anoPrimeiraCopa = 1930;
+    var numeroCopa = 1;
+
+    while (anoPrimeiraCopa <= anoLimite) {
+        mostraTexto("Esta foi a copa #" + numeroCopa + " do ano " + anoPrimeiraCopa);  
+        numeroCopa = numeroCopa + 1;
+        anoPrimeiraCopa = anoPrimeiraCopa + 4;
+    }
+
+    mostraTexto("FIM!");
+
+</script>

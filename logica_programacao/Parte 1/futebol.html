@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>Futebol</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+   var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+   var empates = parseInt(prompt("Entre com o número de empates."));
+
+   var pontos = vitorias * 3 + empates;
+
+   mostraTexto("Os pontos do seu time é " + pontos);
+
+    if(pontos > 28){
+        mostraTexto("O seu time está melhor do que o ano passado.");
+    }
+    if(pontos < 28){
+        mostraTexto("O seu time está pior do que o ano passado.");
+    }
+    if(pontos == 28){
+        mostraTexto("O seu time está igual do que o ano passado.");   
+    }
+</script>

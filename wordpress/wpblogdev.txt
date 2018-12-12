@@ -1,0 +1,15 @@
+RGWPBlogDev
+
+SPWPBlogDev
+
+wpblogdev
+
+wpblogdevdbserver
+
+DB: wpblogdevdb
+Adm: mysqldbuser
+Pwd: s6#sIy#CG0Yi
+
+User: devuser
+Pwd: HjL8bLOT#ed4
+

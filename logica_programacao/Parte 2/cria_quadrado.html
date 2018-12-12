@@ -1,0 +1,28 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function criaQuadradoVerde(x, y, w, z, cor) {
+        
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y,w,z);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x,y,w,z);
+
+    }
+
+    var x = 0;
+
+    while (x < 600) {
+        criaQuadradoVerde(0, 0, 50, 50, 'green');
+        x = x + 50;
+    }
+
+    /* for (var x = 0; x < 600; x = x + 50) {
+
+        criaQuadradoVerde(0, 0, 50, 50, 'green');
+        
+    }*/
+</script>

@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<h1>Jogo Anos das Copa</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    var tabuada = parseInt(prompt("Digite a tabuada que gostaria de ver:"));
+
+    for (var multiplicador = 0; multiplicador <= 10; multiplicador++){
+        mostraTexto(multiplicador * tabuada);
+    }
+
+   mostraTexto("FIM!");
+
+</script>

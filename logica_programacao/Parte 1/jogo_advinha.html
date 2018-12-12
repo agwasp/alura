@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<h1>Jogo de Advinha</h1>
+<br>
+
+<script>
+    function pulaLinha (){
+        document.write("<br><br>");
+    }
+
+    function mostraTexto (texto){
+        document.write("<big>" + texto + "</big>");
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    //console.log(numeroPensado); //Mostra o valor no console do browser
+
+    var contador = 1;
+
+    while (contador <= 3) {
+        var chute = parseInt(prompt("Digite o seu chute!"));
+
+        if(chute == numeroPensado){
+            mostraTexto("Você acertou! O número certo era: " + numeroPensado);
+            break;
+        } 
+        else {
+            mostraTexto("Você errou! Tente novamente!");
+        }
+        contador++;
+    }
+</script>
