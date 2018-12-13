@@ -32,6 +32,14 @@ def procurar(nomes):
     else:
         print 'O nome %s NÃO está na lista' %(search)
 
+def procurar_regex(nomes):
+    import re
+    print('Digite a expressão regular:')
+    regex = raw_input()
+    nomes_concatenados = ''.join(nomes)
+    resultado = re.findall(regex, nomes_concatenados)
+    print (resultado)
+
 def menu():
     nomes = []
     escolha = ''
@@ -42,6 +50,7 @@ def menu():
         print '3 - Remover'
         print '4 - Alterar'
         print '5 - Procurar'
+        print '6 - Procurar Avançado'
         print '0 - Sair'
         escolha = raw_input()
 
@@ -59,5 +68,8 @@ def menu():
         
         if(escolha == '5'):
             procurar(nomes)
+
+         if(escolha == '6'):
+            procurar_regex(nomes)
 
 menu()
