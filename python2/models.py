@@ -8,7 +8,15 @@ class Perfil(object):
         self.nome = nome
         self.telefone = telefone
         self.empresa = empresa
+        # Para deixarmos uma variável encapsulada (como se fosse private) temos que add o "__" na frente da mesma. O Python renomeia a variável internamente para que ela não seja acessível fora dos métodos que a utilizam.
+        self.__curtidas = 0
     
+    def curtir(self):
+        self.__curtidas+=1
+
+    def obter_curtidas(self):
+        return self.__curtidas
+
     def imprimir(self):
         print 'Nome: %s, Telefone: %s, Empresa: %s' % (self.nome, self.telefone, self.empresa)
 
