@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+# def declarado desta forma é uma função 
 
 def cadastrar(nomes):
     print 'Digite o nome'
