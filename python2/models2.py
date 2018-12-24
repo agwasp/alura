@@ -1,3 +1,5 @@
+# -*- coding: UTF-8 -*-
+
 class Perfil(object):
     'Classe para padrão de perfis de usuários'
 
