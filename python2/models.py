@@ -4,18 +4,26 @@ class Perfil(object):
     'Classe para padrão de perfis de usuários'
 
     # def dentro de uma classe é um método
-    def __init__(self, nome, telefone, empresa):
+    def __init__(self, nome, telefone, empresa, tipo):
         self.nome = nome
         self.telefone = telefone
         self.empresa = empresa
         # Para deixarmos uma variável encapsulada (como se fosse private) temos que add o "__" na frente da mesma. O Python renomeia a variável internamente para que ela não seja acessível fora dos métodos que a utilizam.
         self.__curtidas = 0
+        self.__tipo = tipo
     
     def curtir(self):
         self.__curtidas+=1
 
     def obter_curtidas(self):
         return self.__curtidas
+
+    def obter_creditos(self):
+        if self.__tipo == 1:
+            return self.__curtidas * 10.0
+
+    def obter_tipo(self):
+        return self.__tipo
 
     def imprimir(self):
         print 'Nome: %s, Telefone: %s, Empresa: %s' % (self.nome, self.telefone, self.empresa)
