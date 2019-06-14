@@ -21,6 +21,8 @@ class Perfil(object):
         perfis = []
         for linha in arquivo:
             valores = linha.split(',')
+            if(len(valores) is not 3):
+                raise ValueError('Uma linha no arquivo %s deve ter 3 valores' % nome_arquivo)
             perfis.append(classe(*valores))
         arquivo.close()
         return perfis
