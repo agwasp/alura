@@ -43,18 +43,4 @@ if ($tipoDeExportacao -eq "HTML") {
 		ConvertTo-CSV -NoTypeInformation |
 		Out-File c:\tempGui\relatorio.csv
 }
-		
-		
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
