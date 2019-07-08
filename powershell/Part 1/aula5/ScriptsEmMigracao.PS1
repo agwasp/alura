@@ -20,9 +20,9 @@ $lengthExpr = @{
 $params = $nameExpr, $lengthExpr
 
 $resultado =
-	gci -Recurse -File |
-		? Name -like "*_migrando_*" |
-		select $params
+	Get-ChildItem -Recurse -File |
+		Where-Object Name -like "*_migrando_*" |
+		Select-Object $params
 
 		
 if ($tipoDeExportacao -eq "HTML") {
