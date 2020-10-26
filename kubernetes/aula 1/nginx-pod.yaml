@@ -1,0 +1,147 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2020-10-26T21:16:15Z"
+  labels:
+    run: nginx-pod
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:run: {}
+      f:spec:
+        f:containers:
+          k:{"name":"nginx-pod"}:
+            .: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:terminationGracePeriodSeconds: {}
+    manager: kubectl.exe
+    operation: Update
+    time: "2020-10-26T21:16:15Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.1.0.6"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    time: "2020-10-26T21:16:26Z"
+  name: nginx-pod
+  namespace: default
+  resourceVersion: "4014"
+  selfLink: /api/v1/namespaces/default/pods/nginx-pod
+  uid: 9feae149-8167-4440-974c-804b17e79da0
+spec:
+  containers:
+  - image: nginx:1.0
+    imagePullPolicy: Always
+    name: nginx-pod
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-4m4hf
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: docker-desktop
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: default-token-4m4hf
+    secret:
+      defaultMode: 420
+      secretName: default-token-4m4hf
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-26T21:16:15Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-26T21:16:26Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-26T21:16:26Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2020-10-26T21:16:15Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://4f8f0a39454bee1c312aecb5dd78284b4d387f620e0130e7e55c4ada984cb057
+    image: nginx:latest
+    imageID: docker-pullable://nginx@sha256:ed7f815851b5299f616220a63edac69a4cc200e7f536a56e421988da82e44ed8
+    lastState: {}
+    name: nginx-pod
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2020-10-26T21:16:25Z"
+  hostIP: 192.168.65.3
+  phase: Running
+  podIP: 10.1.0.6
+  podIPs:
+  - ip: 10.1.0.6
+  qosClass: BestEffort
+  startTime: "2020-10-26T21:16:15Z"
