@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: primeiro-pod
+  name: prim-pod
   labels:
-    name: primeiro-pod
+    name: prim-pod
 spec:
   containers:
-  - name: container1
+  - name: cont1
     image: nginx:latest
     resources:
       limits:

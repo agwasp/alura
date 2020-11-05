@@ -1,3 +1,8 @@
+##########################################
+# Versão original do pod do nginx dada pelo cmd:
+# kubectl edit pod nginx-pod
+##########################################
+
 apiVersion: v1
 kind: Pod
 metadata:
