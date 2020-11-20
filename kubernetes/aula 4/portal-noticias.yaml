@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-portal
+  name: portal
   labels:
-    app: pod-portal
+    name: portal
 spec:
   containers:
-    - name: ct-portal
+    - name: portal-ct
       image: aluracursos/portal-noticias:1
       resources:
         limits:
