@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: portal
+  labels:
+    name: portal
+spec:
+  containers:
+    - name: portal-ct
+      image: aluracursos/portal-noticias:1
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 80
