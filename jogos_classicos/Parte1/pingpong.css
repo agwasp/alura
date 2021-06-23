@@ -1,0 +1,12 @@
+body {
+    background: blanchedalmond;
+}
+
+canvas {
+    border: 5px solid #7B899B;
+    background: black;
+}
+
+.CanvasContainer {
+    clear: both;
+}
