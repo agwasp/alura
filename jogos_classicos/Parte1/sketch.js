@@ -15,12 +15,24 @@
   let xPlayer2Racquet = 585;
   let yPlayer2Racquet = 150;
   let velocityPlayer2;
+  let errorChance = 0;
   // SCOREBOARD //
   let player1Points = 0;
   let player2Points = 0;
+  // GAME SONGS //
+  let points;
+  let racquet;
+  let song;
+
+  function preload(){
+    song = loadSound("songs/trilha.mp3");
+    racquet = loadSound("songs/raquetada.mp3");
+    points = loadSound("songs/ponto.mp3");
+  }
 
   function setup() {
     createCanvas(600, 400);
+    song.loop();
   }
   
   function draw() {
@@ -67,21 +79,32 @@
     
     if (colision){
       xVelocityBall *= -1;
+      racquet.play();
     }
   }
 
   function scoreBoard(){
+    stroke(255);
+    textAlign(CENTER);
+    textSize(20);
+    fill(0,0,255);
+    rect(130, 10, 40, 20);
     fill(255);
-    text(player1Points, 278, 26);
-    text(player2Points, 321, 26);
+    text(player1Points, 150, 26);
+    fill(0,0,255);
+    rect(430, 10, 40, 20);
+    fill(255);
+    text(player2Points, 450, 26);
   }
 
   function scorePoints(){
     if (xBall > 590){
       player1Points += 1;
+      points.play();
     }
     if (xBall < 10){
       player2Points += 1;
+      points.play();
     }
   }
 
@@ -107,5 +130,21 @@
   // PLAYER 2 //
   function movePlayer2Racquet() {
     yVelocityPlayer2Racquet = yBall - yPlayer2Racquet - wPlayerRacquet / 2 - 30;
-    yPlayer2Racquet += yVelocityPlayer2Racquet    
+    yPlayer2Racquet += yVelocityPlayer2Racquet + errorChance
+    calcErrorChance()
+  }
+
+  function calcErrorChance() {
+    if (player2Points >= player1Points) {
+      errorChance += 1
+      if (errorChance >= 39) {
+        errorChance = 40
+      }
+    }
+    else {
+      errorChance -= 1
+      if (errorChance <= 35) {
+        errorChance = 35
+      }
+    }
   }
