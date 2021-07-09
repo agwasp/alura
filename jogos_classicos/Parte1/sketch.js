@@ -25,9 +25,9 @@
   let song;
 
   function preload(){
-    song = loadSound("songs/trilha.mp3");
-    racquet = loadSound("songs/raquetada.mp3");
-    points = loadSound("songs/ponto.mp3");
+    song = loadSound("songs/song.mp3");
+    racquet = loadSound("songs/racquet.mp3");
+    points = loadSound("songs/points.mp3");
   }
 
   function setup() {
