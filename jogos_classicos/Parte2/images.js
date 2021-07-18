@@ -1,25 +1,24 @@
 let backgroundImage;
 let player1Image;
-let carGreen1Image;
-let carGreen2Image;
-let carBlack1Image;
-let carBlack2Image;
-let carYellow1Image;
-let carYellow2Image;
+let player2Image;
+let carGreenImage;
+let carBlackImage;
+let carYellowImage;
+let collisionSong;
+let pointSong;
+let gameSong;
 
 function preload(){
   backgroundImage = loadImage("images/highway.png");
   
-  player1Image = loadImage("images/player1.png");
-  player2Image = loadImage("images/player2.png");
-  player3Image = loadImage("images/player3.jpg");
-  playerImages = [player1Image, player2Image, player3Image];
+  collisionSong = loadSound("songs/colision.mp3");
+  pointSong = loadSound("songs/points.wav");
+  gameSong = loadSound("songs/song.mp3");
   
-  carGreen1Image = loadImage("images/carGreen1.png");
-  carGreen2Image = loadImage("images/carGreen2.png");
-  carBlack1Image = loadImage("images/carBlack1.png");
-  carBlack2Image = loadImage("images/carBlack2.png");
-  carYellow1Image = loadImage("images/carYellow1.png");
-  carYellow2Image = loadImage("images/carYellow2.png");
-  carImages = [carGreen1Image, carBlack1Image, carYellow1Image, carGreen2Image, carBlack2Image, carYellow2Image];
+  playerImage = loadImage("images/player.png");
+  
+  carGreenImage = loadImage("images/carGreen.png");
+  carBlackImage = loadImage("images/carBlack.png");
+  carYellowImage = loadImage("images/carYellow.png");
+  carImages = [carGreenImage, carBlackImage, carYellowImage, carGreenImage, carBlackImage, carYellowImage];
 }

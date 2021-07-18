@@ -1,6 +1,6 @@
 function setup() {
   createCanvas(500, 400);
-  //song.loop();
+  // gameSong.loop();
 }
 
 function draw() {
@@ -10,4 +10,7 @@ function draw() {
   movePlayer();
   moveCars();
   restartOnHighway();
+  playerCarCollision();
+  scoreboard();
+  addPoints();
 }

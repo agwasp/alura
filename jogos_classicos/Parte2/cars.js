@@ -1,7 +1,7 @@
 // CAR ORDER - Green1 / Black1 / Yellow1 / Green2 / Black2 / Yellow2
 let xCars = [530, 530, 530, 530, 530, 530];
-let yCars = [45, 100, 155, 215, 270, 325];
-let wCars = 30;
+let yCars = [45, 100, 155, 215, 270, 320];
+let wCars = 40;
 let hCars = 30;
 let velocityCars = [0, 0, 0, 0, 0, 0];
 let rndNum = 0;
