@@ -9,6 +9,9 @@ function draw() {
   showCarPlayer();
   movePlayer();
   moveCars();
+  // carVelocitiesBoard();
+  // fastestCarOnBoard();
+  // slowestCarOnBoard();
   restartOnHighway();
   playerCarCollision();
   scoreboard();
