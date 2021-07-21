@@ -8,6 +8,8 @@ client1.clientId = 123456;
 const client1Account = new Account();
 client1Account.clientAgency = 1010;
 client1Account.client = client1;
+client1Account.deposit(300);
+client1Account.withdrawal(20);
 
 const client2 = new Client();
 client2.clientName = "Max";
@@ -16,6 +18,8 @@ client2.clientId = 456789;
 const client2Account = new Account();
 client2Account.clientAgency = 1015;
 client2Account.client = client2;
+client1Account.deposit(300);
+client1Account.withdrawal(20);
 
 const client3 = new Client();
 client3.clientName = "Ricardo";
@@ -24,6 +28,8 @@ client3.clientId = 789123;
 const client3Account = new Account();
 client3Account.clientAgency = 1020;
 client3Account.client = client3;
+client1Account.deposit(300);
+client1Account.withdrawal(20);
 
 const client4 = new Client();
 client4.clientName = "Maria";
@@ -32,10 +38,8 @@ client4.clientId = 654987;
 const client4Account = new Account();
 client4Account.clientAgency = 1025;
 client4Account.client = client4;
-
 client1Account.deposit(300);
-const withdrawal = client1Account.withdrawal(20);
-console.log(withdrawal);
+client1Account.withdrawal(20);
 
 // console.log(client1, client2, client3, client4);
 console.log(client1Account, client2Account, client3Account, client4Account);

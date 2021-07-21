@@ -2,6 +2,7 @@ export class Account {
     // PUBLIC
     clientAgency;
     client;
+    
     // Convencao da comunidade é "_clientBalance" para deixar claro que é privado, embora não seja realmente
     // "#" é a feature para tornar uma variável privada
     // PRIVATE
