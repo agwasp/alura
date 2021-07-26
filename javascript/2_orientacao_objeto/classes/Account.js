@@ -33,6 +33,12 @@ export class Account {
         return this._clientBalance;
     }
 
+    constructor(id, branch, client) {
+        this.accountId = id;
+        this._branch = branch;
+        this._client = client;
+    }
+
     withdrawal (value) {
         if (this._clientBalance >= value) {
             this._clientBalance -= value;
