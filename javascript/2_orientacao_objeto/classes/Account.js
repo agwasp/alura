@@ -3,6 +3,7 @@ import { Client } from "./Client.js";
 
 export class Account {
     // PUBLIC
+    static accountCounter = 0;
     accountId;
 
     // Convenção da comunidade é "_clientBalance" para deixar claro que é privado, embora não seja realmente
@@ -37,6 +38,7 @@ export class Account {
         this.accountId = id;
         this._branch = branch;
         this._client = client;
+        Account.accountCounter += 1;
     }
 
     withdrawal (value) {
