@@ -1,0 +1,33 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "eslint:recommended",
+        "plugin:import/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "import"
+    ],
+    "rules": {
+        //"import/no-unresolved": "[2, {commonjs: true, amd: true}]",
+        //"import/named": "2",
+        //"import/namespace": "2",
+        //"import/default": "2",
+        "import/export": "2"
+    }
+}

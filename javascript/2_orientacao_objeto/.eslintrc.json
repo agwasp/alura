@@ -1,4 +1,3 @@
-// Run: 'npx eslint --init'
 {
     "env": {
         "browser": true,
