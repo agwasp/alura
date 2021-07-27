@@ -1,13 +1,11 @@
 export class Branch {
-    _branchId;
-    branchName;
-    branchLocation;
     static branchCounter = 0;
 
     get branchId() {
         return this._branchId;
     }
 
+    // variables should be declared and initiated inside the constructor
     constructor(id, name, location) {
         this._branchId = id;
         this.branchName = name;

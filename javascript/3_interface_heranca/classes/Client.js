@@ -1,13 +1,11 @@
 export class Client {
-    _clientId;
-    clientName;
-    clientLastName;
     static clientCounter = 0;
 
     get clientId() {
         return this._clientId;
     }
 
+    // variables should be declared and initiated inside the constructor
     constructor(id, name, lastName) {
         this._clientId = id;
         this.clientName = name;

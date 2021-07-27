@@ -1,15 +1,9 @@
-import { Branch } from "./Branch.js";
-import { Client } from "./Client.js";
+import { Branch } from './classes/Branch.js'
+import { Client } from './classes/Client.js'
 
-export class Account {
-    // PUBLIC
-    static accountCounter = 0;
-    accountId;
+export class SavingsAccount {
+    static savingsAccountCounter = 0;
 
-    // Convenção da comunidade é "_clientBalance" para deixar claro que é privado, embora não seja realmente
-    // "#" é a feature para tornar uma variável privada https://github.com/tc39/proposal-class-fields#private-fields
-    // PRIVATE
-    _branch;
     get branch() {
         return this._branch;
     }
@@ -19,7 +13,6 @@ export class Account {
         }
     }
 
-    _client;
     get client() {
         return this._client;
     }
@@ -29,16 +22,17 @@ export class Account {
         }
     }
 
-    _clientBalance = 0;
     get balance() {
         return this._clientBalance;
     }
 
+    // variables should be declared and initiated inside the constructor
     constructor(id, branch, client) {
-        this.accountId = id;
+        this.savingsAccountId = id;
         this._branch = branch;
         this._client = client;
-        Account.accountCounter += 1;
+        this._clientBalance = 0;
+        SavingsAccount.savingsAccountCounter += 1;
     }
 
     withdrawal (value) {
