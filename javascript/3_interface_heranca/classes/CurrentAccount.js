@@ -9,7 +9,7 @@ export class CurrentAccount extends Account {
     }
 
     withdrawal (value) {
-        let tax = 1.1;
+        let tax = 1.05;
         return this._withdrawal(value, tax);
     }
 }

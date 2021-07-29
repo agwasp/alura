@@ -10,7 +10,7 @@ export class SavingsAccount extends Account {
     }
 
     withdrawal (value) {
-        let tax = 1.05;
+        let tax = 1.02;
         return this._withdrawal(value, tax);
     }
 }
