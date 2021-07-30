@@ -1,7 +1,10 @@
-import { Branch } from './classes/Branch.js'
-import { Client } from './classes/Client.js'
-import { CurrentAccount } from './classes/CurrentAccount.js'
-import { SavingsAccount } from './classes/SavingsAccount.js'
+import { Branch } from './Branch.js'
+import { Client } from './Client.js'
+import { CurrentAccount } from './Account/CurrentAccount.js'
+import { SavingsAccount } from './Account/SavingsAccount.js'
+import { ClerkWorker } from './Worker/ClerkWorker.js'
+import { ManagerWorker } from './Worker/ManagerWorker.js'
+import { DirectorWorker } from './Worker/DirectorWorker.js'
 
 // BRANCHES (id, name, location)
 const branch1 = new Branch(1010, 'Tucuruvi', 'São Paulo');
@@ -37,9 +40,21 @@ client1Savings.withdrawal(50);
 client1Account.transfer(50, client2Account);
 client2Account.transfer(50, client1Account);
 
-console.log(client1Account); //, client2Account, client3Account);
-console.log(client1Savings);
-console.log(`Total Active Branches: ` + Branch.branchCounter);
-console.log(`Total Active Current Accounts: ` + CurrentAccount.currentAccountCounter);
-console.log(`Total Active Saving Accounts: ` + SavingsAccount.savingsAccountCounter);
-console.log(`Total Active Clients: ` + Client.clientCounter);
+// WORKERS
+const worker1Clerk = new ClerkWorker(101001, 'Jose', 'Pinto', 50000);
+const worker1Manager = new ManagerWorker(102002, 'Manuel', 'Pereira', 90000);
+const worker1Director = new DirectorWorker(103003, 'Mariana', 'Silva', 100000);
+
+// console.log(client1Account); //, client2Account, client3Account);
+// console.log(client1Savings);
+console.log(worker1Clerk, worker1Manager, worker1Director);
+
+console.log(`--------------------`);
+console.log(`Total Clients: ` + Client.clientCounter);
+console.log(`Total Clerks: ` + ClerkWorker.clerkCounter);
+console.log(`Total Managers: ` + ManagerWorker.managerCounter);
+console.log(`Total Directors: ` + DirectorWorker.directorCounter);
+console.log(`--------------------`);
+console.log(`Total Current Accounts: ` + CurrentAccount.currentAccountCounter);
+console.log(`Total Savings Accounts: ` + SavingsAccount.savingsAccountCounter);
+console.log(`Total Branches: ` + Branch.branchCounter);

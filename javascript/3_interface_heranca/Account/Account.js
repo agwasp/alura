@@ -1,5 +1,5 @@
-import { Branch } from './Branch.js'
-import { Client } from './Client.js'
+import { Branch } from '../Branch.js'
+import { Client } from '../Client.js'
 
 // Abstract class
 // You can't use it to create objects, only extending the functions to another class
