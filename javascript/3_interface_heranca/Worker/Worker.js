@@ -12,11 +12,11 @@ export class Worker {
         this._password;
     }
 
-    get password() {
-        return this._password;
+    authentication(password) {
+        return password == this._password;
     }
 
     registerPassword(password) {
-        this._password = password
+        this._password = password;
     }
 }
