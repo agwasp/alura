@@ -9,5 +9,14 @@ export class Worker {
         this.lastName = lastName;
         this._payslip = payslip;
         this._bonus = 1;
+        this._password;
+    }
+
+    get password() {
+        return this._password;
+    }
+
+    registerPassword(password) {
+        this._password = password
     }
 }

@@ -5,6 +5,7 @@ import { SavingsAccount } from './Account/SavingsAccount.js'
 import { ClerkWorker } from './Worker/ClerkWorker.js'
 import { ManagerWorker } from './Worker/ManagerWorker.js'
 import { DirectorWorker } from './Worker/DirectorWorker.js'
+import { Authentication } from './Authentication.js'
 
 // BRANCHES (id, name, location)
 const branch1 = new Branch(1010, 'Tucuruvi', 'São Paulo');
@@ -45,9 +46,14 @@ const worker1Clerk = new ClerkWorker(101001, 'Jose', 'Pinto', 50000);
 const worker1Manager = new ManagerWorker(102002, 'Manuel', 'Pereira', 90000);
 const worker1Director = new DirectorWorker(103003, 'Mariana', 'Silva', 100000);
 
-// console.log(client1Account); //, client2Account, client3Account);
+// AUTHENTICATION
+worker1Manager.registerPassword("password");
+const authentication = Authentication.login(worker1Manager, "password");
+
+// console.log(client1Account, client2Account, client3Account);
 // console.log(client1Savings);
-console.log(worker1Clerk, worker1Manager, worker1Director);
+// console.log(worker1Clerk, worker1Manager, worker1Director);
+console.log(authentication);
 
 console.log(`--------------------`);
 console.log(`Total Clients: ` + Client.clientCounter);
