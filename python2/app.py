@@ -1,76 +1,76 @@
 # -*- coding: UTF-8 -*-
-# def declarado desta forma é uma função 
+# def declarado desta forma é uma função
 
 def cadastrar(nomes):
-    print 'Digite o nome'
+    print ("Digite o nome")
     nome = raw_input()
     nomes.append(nome)
 
 def listar(nomes):
-    print 'Listando nomes'
+    print ("Listando nomes")
     for nome in nomes:
-        print nome
+        print (nome)
 
 def remover(nomes):
-    print 'Qual nome gostaria de remover?'
+    print ("Qual nome gostaria de remover?")
     nome = raw_input()
     nomes.remove(nome)
 
 def alterar(nomes):
-    print 'Qual nome vc gostaria de alterar?'
+    print ("Qual nome vc gostaria de alterar?")
     nome = raw_input()
     if(nome in nomes):
         index = nomes.index(nome)
-        print 'Qual o novo nome?'
+        print ("Qual o novo nome?")
         novo_nome = raw_input()
         nomes[index] = novo_nome
 
 def procurar(nomes):
-    print 'Qual nome gostaria de procurar?'
+    print ("Qual nome gostaria de procurar?")
     search = raw_input()
     if(search in nomes):
-        print 'O nome %s está na lista' %(search)
+        print ("O nome %s está na lista") %(search)
     else:
-        print 'O nome %s NÃO está na lista' %(search)
+        print ("O nome %s NÃO está na lista") %(search)
 
 def procurar_regex(nomes):
     import re
-    print('Digite a expressão regular:')
+    print("Digite a expressão regular:")
     regex = raw_input()
-    nomes_concatenados = ''.join(nomes)
+    nomes_concatenados = "".join(nomes)
     resultado = re.findall(regex, nomes_concatenados)
     print (resultado)
 
 def menu():
     nomes = []
-    escolha = ''
-    while(escolha != '0')
-        print 'Escolha uma opção:'
-        print '1 - Cadastrar'
-        print '2 - Listar'
-        print '3 - Remover'
-        print '4 - Alterar'
-        print '5 - Procurar'
-        print '6 - Procurar Avançado'
-        print '0 - Sair'
+    escolha = ""
+    while(escolha != "0"):
+        print ("Escolha uma opção:")
+        print ("1 - Cadastrar")
+        print ("2 - Listar")
+        print ("3 - Remover")
+        print ("4 - Alterar")
+        print ("5 - Procurar")
+        print ("6 - Procurar Avançado")
+        print ("0 - Sair")
         escolha = raw_input()
 
-        if(escolha == '1'):
+        if(escolha == "1"):
             cadastrar(nomes)
 
-        if(escolha == '2'):
+        if(escolha == "2"):
             listar(nomes)
 
-        if(escolha == '3'):
+        if(escolha == "3"):
             remover(nomes)
-        
-        if(escolha == '4'):
+
+        if(escolha == "4"):
             alterar(nomes)
-        
-        if(escolha == '5'):
+
+        if(escolha == "5"):
             procurar(nomes)
 
-         if(escolha == '6'):
+        if(escolha == "6"):
             procurar_regex(nomes)
 
 menu()

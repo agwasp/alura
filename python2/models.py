@@ -11,7 +11,7 @@ class Perfil(object):
         # Para deixarmos uma variável encapsulada (como se fosse private) temos que add o "__" na frente da mesma. O Python renomeia a variável internamente para que ela não seja acessível fora dos métodos que a utilizam.
         self.__curtidas = 0
         self.__tipo = tipo
-    
+
     def curtir(self):
         self.__curtidas+=1
 
@@ -26,7 +26,7 @@ class Perfil(object):
         return self.__tipo
 
     def imprimir(self):
-        print 'Nome: %s, Telefone: %s, Empresa: %s' % (self.nome, self.telefone, self.empresa)
+        print ('Nome: %s, Telefone: %s, Empresa: %s') % (self.nome, self.telefone, self.empresa)
 
 class Data(object):
    def __init__(self, dia, mes, ano):
@@ -35,7 +35,7 @@ class Data(object):
       self.ano = ano
 
    def imprimir(self):
-      print '%s/%s/%s' % (self.dia, self.mes, self.ano)
+      print ('%s/%s/%s') % (self.dia, self.mes, self.ano)
 
 class IMCPessoa(object):
     def __init__(self, nome, peso, altura):
@@ -45,4 +45,4 @@ class IMCPessoa(object):
 
     def imprimir(self):
         IMC = (self.altura **2) / self.peso
-        print 'O IMC de %s é: %s' % (self.nome, IMC)
+        print ('O IMC de %s é: %s') % (self.nome, IMC)

@@ -8,7 +8,7 @@ class Perfil(object):
         self.telefone = telefone
         self.empresa = empresa
         self.__curtidas = 0
-    
+
     def curtir(self):
         self.__curtidas+=1
 
@@ -28,7 +28,7 @@ class Perfil(object):
         return perfis
 
     def imprimir(self):
-        print 'Nome: %s, Telefone: %s, Empresa: %s' % (self.nome, self.telefone, self.empresa)
+        print ('Nome: %s, Telefone: %s, Empresa: %s') % (self.nome, self.telefone, self.empresa)
 
 class Perfil_Vip(Perfil):
     'Classe para padrão de perfis de usuários VIPs'

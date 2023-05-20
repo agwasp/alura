@@ -5,7 +5,7 @@ class Conta(object):
         self.saldo = saldo
 
 
-    def calcular_imposto(self): 
+    def calcular_imposto(self):
         self.saldo = self.saldo * 0.10
         return self.saldo
 
@@ -19,5 +19,5 @@ class ContaCorrente(Conta):
     def calcular_imposto(self):
         return super(ContaCorrente, self).calcular_imposto() + self.bonus
 
-cc = ContaCorrente('xxx', 2000, 50);
-print cc.calcular_imposto()
+cc = ContaCorrente('xxx', 2000, 50)
+print (cc.calcular_imposto())
